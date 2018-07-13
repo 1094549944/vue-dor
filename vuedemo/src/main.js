@@ -10,7 +10,9 @@ import 'styles/reset'
 import 'styles/border'
 import 'babel-polyfill'
 import 'styles/iconfont'
+import fastClick from 'fastclick'
 Vue.config.productionTip = false
+fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 Vue.use(Button).use(Row).use(Col).use(Col).use(Search).use(Swipe).use(SwipeItem).use(Lazyload).use(List).use(Field).use(NavBar).use(Tab).use(Tabs)
 /* eslint-disable no-new */
