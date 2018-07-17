@@ -25,7 +25,7 @@ export default new Router({
       name: 'Collet',
       component: Collet
     }, {
-      path: '/Detail:goodsId',
+      path: '/Detail/:goodsId',
       name: 'Detail',
       component: Detail
     }, {

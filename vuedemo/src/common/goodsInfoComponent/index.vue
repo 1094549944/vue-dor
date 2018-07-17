@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     goGoodsPage () {
-      this.$router.push({ name: 'Detail', query: { goodsId: this.goodsId } })
+      this.$router.push({ name: 'Detail', params: { goodsId: this.goodsId } })
     }
   }
 }
