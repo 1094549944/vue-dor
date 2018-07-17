@@ -10,8 +10,15 @@
           <div class="recommend-item">
             <img :src="item.image"
                  width="80%">
-            <div>{{item.goodsName}}</div>
-            <div>￥{{item.price|moneyFilter}}(￥{{item.mallPrice|moneyFilter}})</div>
+            <div class="recommend-name">{{item.goodsName}}</div>
+            <div>
+              <div class="price-area">
+                <span class="origin-price">原价￥{{item.price|moneyFilter}}</span>
+              </div>
+              <div class="price-area">
+                <span class="price">现价(￥{{item.mallPrice|moneyFilter}})</span>
+              </div>
+            </div>
           </div>
         </swiper-slide>
       </swiper>
@@ -20,36 +27,66 @@
 </template>
 
 <script>
+import { toMoney } from '@/filter/moneyFilter'
 export default {
   name: 'bannerGoods',
+  props: { recommendGoods: Array },
   data () {
     return {
       swiperOption: {
         slidesPerView: 3
       }
     }
-  }
+  },
+  filters: {
+    moneyFilter (money) {
+      return toMoney(money)
+    }
+  },
 }
 </script>
 
-<style scoped>
-.recommend-area {
-  background-color: #fff;
-  margin-top: 0.3rem;
-}
-.recommend-title {
-  border-bottom: 1px solid #eee;
-  font-size: 14px;
-  padding: 0.2rem;
-  color: #e5017d;
-}
-.recommend-body {
-  border-bottom: 1px solid #eee;
-}
-.recommend-item {
-  width: 99%;
-  border-right: 1px solid #eee;
-  font-size: 12px;
-  text-align: center;
-}
+<style scoped lang="stylus">
+@import '~styles/varibles.styl'
+
+.recommend-area
+  background-color #fff
+  margin-top 0.3rem
+
+.recommend-title
+  border-bottom 1px solid #eee
+  font-size 14px
+  padding 0.2rem
+  color $fontRedColor
+
+.recommend-body
+  border-bottom 1px solid #eee
+
+.recommend-item
+  width 99%
+  border-right 1px solid #eee
+  font-size 12px
+  text-align center
+
+.recommend-item div
+  text-align left
+
+.recommend-area .recommend-name
+  ellipsis2()
+  color $fontColor
+  font-size $font12
+  line-height 1.5
+  padding $10 $20
+
+.recommend-area .price-area
+  padding $10 $20
+
+.recommend-area .origin-price
+  color $fontOriginColor
+  font-size $font10
+  text-decoration line-through
+
+.recommend-area .price
+  font-weight $700
+  color $fontPriceColor
 </style>

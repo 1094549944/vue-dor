@@ -9,7 +9,7 @@
       <!--使用slot 插槽，使用vue-awesome-swiper 组件-->
       <swiper-slot>
         <div slot="swiperBanner">
-          <banner-goods></banner-goods>
+          <banner-goods :recommendGoods="bannerGoods"></banner-goods>
         </div>
       </swiper-slot>
     </template>
@@ -48,6 +48,7 @@ export default {
       if (res.ret && res.data) {
         this.loadFlag = false
         this.swiperlist = res.data.swiperlist
+        this.bannerGoods = res.data.recommend
       }
     }
   }
