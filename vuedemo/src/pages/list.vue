@@ -1,6 +1,6 @@
 <template>
   <div>
-    列表页main
+    列表页
   </div>
 </template>
 
@@ -10,5 +10,5 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="stylus">
 </style>

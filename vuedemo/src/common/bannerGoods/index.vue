@@ -9,7 +9,9 @@
                       :key="index">
           <div class="recommend-item">
             <img :src="item.image"
-                 width="80%">
+                 width="100%"
+                 height="auto">
+
             <div class="recommend-name">{{item.goodsName}}</div>
             <div>
               <div class="price-area">
@@ -28,6 +30,7 @@
 
 <script>
 import { toMoney } from '@/filter/moneyFilter'
+
 export default {
   name: 'bannerGoods',
   props: { recommendGoods: Array },
@@ -51,21 +54,21 @@ export default {
 
 .recommend-area
   background-color #fff
-  margin-top 0.3rem
+  margin-top $12
 
 .recommend-title
-  border-bottom 1px solid #eee
-  font-size 14px
-  padding 0.2rem
+  border-bottom 1px solid $BgColor
+  font-size $font14
+  padding $8
   color $fontRedColor
 
 .recommend-body
-  border-bottom 1px solid #eee
+  border-bottom 1px solid $BgColor
 
 .recommend-item
   width 99%
-  border-right 1px solid #eee
-  font-size 12px
+  border-right 1px solid $BgColor
+  font-size $font12
   text-align center
 
 .recommend-item div
@@ -74,9 +77,9 @@ export default {
 .recommend-area .recommend-name
   ellipsis2()
   color $fontColor
-  font-size $font12
   line-height 1.5
   padding $10 $20
+  height $70
 
 .recommend-area .price-area
   padding $10 $20
@@ -87,6 +90,6 @@ export default {
   text-decoration line-through
 
 .recommend-area .price
-  font-weight $700
+  font-weight $weight700
   color $fontPriceColor
 </style>

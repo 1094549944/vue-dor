@@ -1,18 +1,27 @@
 <template>
   <div class="footer border-topbottom">
-    <div>
+
+    <router-link to="/"
+                 tag="div">
       <span class="iconfont">&#xe623;</span>
       <span>首页</span>
-    </div>
-    <div>
+    </router-link>
+
+    <router-link to="/List"
+                 tag="div">
+
       <span class="iconfont">&#xe630;</span>
       <span>列表页</span>
-    </div>
-    <div class="cart">
+
+    </router-link>
+
+    <router-link class="cart"
+                 tag="div"
+                 to="/Collet">
       <span class="number">+1</span>
       <span class="iconfont">&#xe609;</span>
       <span>购物车</span>
-    </div>
+    </router-link>
 
   </div>
 </template>
@@ -40,6 +49,7 @@ export default {
   display flex
   align-items center
   font-size $font16
+  background $BgColor
 
   div
     flex 1
@@ -53,4 +63,7 @@ export default {
     top $-40
     left $-50
     width 100%
+
+.router-link-exact-active
+  color $fontPriceColor
 </style>

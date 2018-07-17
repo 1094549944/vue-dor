@@ -1,11 +1,10 @@
 <template>
   <div class="wrapper">
     <div class="swiper-area">
-      <van-swipe :autoplay="1000">
+      <van-swipe :autoplay="3000">
         <van-swipe-item v-for="( banner ,index) in list"
                         :key="index">
-          <img v-lazy="banner.image"
-               width="100%" />
+          <img v-lazy="banner.image" />
         </van-swipe-item>
       </van-swipe>
 
@@ -38,16 +37,17 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~styles/varibles.styl'
+
 .wrapper >>> .swiper-pagination-bullet-active
   background #fff
 
 .wrapper
   overflow hidden
   width 100%
-  height 0
-  padding-bottom 31.25%
   background #eee
 
-  .swiper-img
+  img
     width 100%
+    height $300
 </style>

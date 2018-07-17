@@ -1,6 +1,7 @@
 <template>
   <div class="main">
-    <div v-if="loadFlag">
+    <div class="loadWraper"
+         v-if="loadFlag">
       <Loading></Loading>
     </div>
     <template v-else>
@@ -12,6 +13,27 @@
           <banner-goods :recommendGoods="bannerGoods"></banner-goods>
         </div>
       </swiper-slot>
+      <!--热门推荐-->
+
+      <div class="hot-area">
+        <div class="hot-title">热卖商品</div>
+        <div class="hot-goods">
+          <!--这里是一个list组件-->
+          <van-list>
+            <van-row gutter="20">
+              <van-col span="12"
+                       v-for="item of hotGoods"
+                       :key="item.goodsId">
+                <goods-info :goodsImage="item.image"
+                            :goodsName="item.name"
+                            :goodsPrice="item.price"
+                            :goodsId="item.goodsId"></goods-info>
+              </van-col>
+            </van-row>
+          </van-list>
+        </div>
+      </div>
+
     </template>
   </div>
 </template>
@@ -21,19 +43,24 @@ import Loading from 'common/loading'
 import Swiper from 'common/swiper'
 import swiperSlot from 'common/swiperSlot'
 import bannerGoods from 'common/bannerGoods'
+import goodsInfo from 'common/goodsInfoComponent'
+
 import axios from 'axios'
 export default {
-  name: 'Index',
+  name: 'Detail',
   components: {
     Loading,
     Swiper,
     swiperSlot,
-    bannerGoods
+    bannerGoods,
+    goodsInfo
+
   },
   data () {
     return {
       loadFlag: true,
-      swiperlist: []
+      swiperlist: [],
+      hotGoods: []//热卖商品
     }
   },
   created () {
@@ -49,6 +76,7 @@ export default {
         this.loadFlag = false
         this.swiperlist = res.data.swiperlist
         this.bannerGoods = res.data.recommend
+        this.hotGoods = res.data.hotGoods
       }
     }
   }
@@ -56,11 +84,25 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+@import '~styles/varibles.styl'
+
 .main
+  overflow hidden
+
+.loadWraper
   position absolute
-  left 0
-  right 0
-  bottom 0
-  top 0
-  overflow auto
+  left 50%
+  top 40%
+  transform translate(-50%, -50%)
+  -webkit-transform translate(-50%, -50%)
+
+.hot-area
+  padding-bottom $100
+
+.hot-area .hot-title
+  border-bottom 1px solid $BgColor
+  font-size $font14
+  padding $8
+  color $fontRedColor
+  margin $12 0
 </style>

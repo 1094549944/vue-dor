@@ -1,38 +1,32 @@
 {
-  "ret": true,
   "data": {
-    "sightName": "大连圣亚海洋世界(AAAA景区)",
-    "bannerImg": "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg",
-    "gallaryImgs": [
-      "http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg",
-      "http://img1.qunarzz.com/sight/p0/1709/76/7691528bc7d7ad3ca3.img.png_800x800_9ef05ee7.png"
-    ],
-    "categoryList": [
-      {
-        "title": "成人票",
-        "children": [
-          {
-            "title": "成人三馆联票",
-            "children": [
-              {
-                "title": "成人三馆联票 - 某一连锁店销售"
-              }
-            ]
-          },
-          {
-            "title": "成人五馆联票"
-          }
-        ]
-      },
-      {
-        "title": "学生票"
-      },
-      {
-        "title": "儿童票"
-      },
-      {
-        "title": "特惠票"
-      }
-    ]
+    "details": {
+      "ID": "ded2586feda640d2a0fb662b26593c76",
+      "GOODS_SERIAL_NUMBER": "6926136720022",
+      "SHOP_ID": "402880e860166f3c0160167897d60002",
+      "SUB_ID": "402880e86016d1b5016016e458ca001c",
+      "GOOD_TYPE": 0,
+      "STATE": 0,
+      "IS_DELETE": 1,
+      "NAME": "长寿花葵花籽油5L/桶",
+      "ORI_PRICE": 82.3,
+      "PRESENT_PRICE": 79.9,
+      "AMOUNT": 10000,
+      "DETAIL": "<img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171226/20171226172923_1168.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171226/20171226172923_6304.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171226/20171226172924_19.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171226/20171226172924_3955.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171226/20171226172924_9463.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171226/20171226172924_6165.jpg\" width=\"100%\" height=\"auto\" alt=\"\" /><img src=\"http://images.baixingliangfan.cn/shopGoodsDetailImg/20171226/20171226172924_3606.jpg\" width=\"100%\" height=\"auto\" alt=\"\" />",
+      "BRIEF": null,
+      "SALES_COUNT": 0,
+      "IMAGE1": "http://images.baixingliangfan.cn/shopGoodsImg/20171226/20171226172914_9723.jpg",
+      "IMAGE2": null,
+      "IMAGE3": null,
+      "IMAGE4": null,
+      "IMAGE5": null,
+      "ORIGIN_PLACE": null,
+      "GOOD_SCENT": null,
+      "CREATE_TIME": 1512208901993,
+      "UPDATE_TIME": 1519724318273,
+      "IS_RECOMMEND": 0,
+      "PICTURE_COMPERSS_PATH": "http://images.baixingliangfan.cn/compressedPic/20171226172914_9723.jpg"
+    },
+    ""
   }
 }
