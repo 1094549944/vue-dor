@@ -6,7 +6,12 @@
            width="90%" />
     </div>
     <div class="goods-name">{{goodsName}}</div>
-    <div class="goods-price">￥{{goodsPrice | moneyFilter }}</div>
+    <div class="goods-price">￥{{goodsPrice | moneyFilter }}
+    </div>
+    <div>
+      <van-button type="primary"
+                  plain>加入购物车</van-button>
+    </div>
   </div>
 </template>
 

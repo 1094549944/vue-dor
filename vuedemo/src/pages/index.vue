@@ -44,7 +44,6 @@ import Swiper from 'common/swiper'
 import swiperSlot from 'common/swiperSlot'
 import bannerGoods from 'common/bannerGoods'
 import goodsInfo from 'common/goodsInfoComponent'
-
 import axios from 'axios'
 export default {
   name: 'Detail',
