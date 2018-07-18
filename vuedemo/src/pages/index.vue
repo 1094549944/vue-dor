@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import Loading from 'common/loading'
 import Swiper from 'common/swiper'
 import swiperSlot from 'common/swiperSlot'
@@ -78,7 +79,11 @@ export default {
         this.hotGoods = res.data.hotGoods
       }
     }
-  }
+  },
+  ...mapGetters({
+    cartData: 'cart/cartData',
+
+  })
 }
 </script>
 

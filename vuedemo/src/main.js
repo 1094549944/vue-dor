@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import { Button, Row, Col, Search, Swipe, Lazyload, SwipeItem, List, Field, NavBar, Tab, Tabs, Card } from 'vant'
 import 'swiper/dist/css/swiper.css'
@@ -21,6 +22,7 @@ Vue.use(Button).use(Row).use(Col).use(Col).use(Lazyload).use(Search).use(Swipe).
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
